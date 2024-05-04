@@ -20,7 +20,7 @@ router.post("/create", async (req, res) => {
       const CertificateResponse = await CertificateData.save();
       res
         .status(201)
-        .json({ message: "Task Added Successfully", Certificate: CertificateResponse });
+        .json({ message: "Certificate Generated Successfully", Certificate: CertificateResponse });
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error! Try Again" });
     }
